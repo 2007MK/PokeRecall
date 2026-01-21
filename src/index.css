@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "Bruno Ace";
+  src: url(../src/assets/fonts/BrunoAceSC-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bruno Ace", "Georgia", "Times New Roman";
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 200px;
+  min-height: 200px;
+  border: 3px solid hsl(200, 100%, 50%);
+  box-shadow: 3px 5px 2px hsla(0, 0%, 0%, 0.153);
+  border-radius: 30px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.1s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-grid {
+  padding: 1em;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.card-img {
+  height: 150px;
+}
+
+.scoreboard {
+  background-color: hsl(200, 100%, 50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  border: 5px solid hsl(0, 100%, 50%);
+  background-color: red;
+  height: 100px;
+  width: 200px;
+}
+
+@media (max-width: 444px) {
+  .card {
+    padding: 0;
+    width: 1em;
+    height: 1em;
+    min-width: 120px;
+    min-height: 150px;
+    flex: 1;
+  }
+
+  .card-img {
+    height: 6em;
+  }
+}
